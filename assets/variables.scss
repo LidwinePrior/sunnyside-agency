@@ -1,0 +1,93 @@
+//color
+
+//primary color
+$softRed :  hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$darkDesaturatedCyan: hsl(167, 40%, 24%);  //graphic design text
+$darkBlue: hsl(198, 62%, 26%);  //photography text
+$darkModerateCyan : hsl(168, 34%, 41%); //footer
+
+//neutral
+$veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+$veryDarkGrayishBlue: hsl(213, 9%, 39%);
+$darkGrayishBlue: hsl(232, 10%, 55%);
+$grayishBlue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+$beige: #fffbf8;
+
+//-------------------------------------------------------------
+
+//Typography
+
+//body copy
+ $fontSize : 18px;
+
+//font
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:opsz@9..144&display=swap');  //font-family: 'Barlow', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap');                //font-family: 'Fraunces', serif;
+
+$familyOne: 'Barlow', sans-serif;
+$familyTwo: 'Fraunces', serif;
+
+@mixin background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+
+
+
+
+//----------------------A voir avec le menu sur ecran pc------
+// @mixin link {
+//     ul{
+//         width:80%;
+//         list-style: none;
+//         display: flex;
+//         justify-content: center;
+//         li{
+//             padding: 0 10px;
+//             a {
+//                 text-decoration: none;
+//                 color:$darkModerateCyan;
+//                 padding: 10px 20px;
+//                 background: transparent;
+//                 border-radius: 25px;
+//                 font-size: $fontSize;
+                
+//                 &:hover {
+//                     text-transform: uppercase;
+//                     color: $veryDarkDesaturatedBlue;
+//                     background-color: $white;
+//                     font-size: 15px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+@mixin layout {
+    text-align: center;
+    height: 63vh;
+    h2 {
+        font-family: $familyTwo;
+        color: $veryDarkDesaturatedBlue;
+        font-size: 30px;
+    }
+    p {
+        color: $darkGrayishBlue;
+        font-family: $familyOne;
+    }
+    a {
+        color: $veryDarkDesaturatedBlue;
+        font-family: $familyTwo;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-bottom: 10px solid #fedad4;
+    }
+}
