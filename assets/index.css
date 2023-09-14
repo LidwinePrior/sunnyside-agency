@@ -191,6 +191,31 @@ body {
   width: 100%;
 }
 
+.text {
+  padding: 0 5%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+.text h2 {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+  font-size: 30px;
+}
+.text p {
+  color: hsl(232, 10%, 55%);
+  font-family: "Barlow", sans-serif;
+}
+.text a {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 10px solid #fedad4;
+}
+
 #home {
   height: 100vh;
   background: url("./images/photos/image-header.jpg");
@@ -198,14 +223,38 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
+  font-family: "Fraunces", serif;
   color: hsl(0, 0%, 100%);
-  font-size: 30px;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#home .logoHamburger {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10% 5%;
 }
 #home .logo {
-  padding: 32px 15px;
+  height: 25px;
+  width: 120px;
 }
-#home nav {
+#home .menuButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+#home nav ul {
   display: none;
+}
+#home nav ul.active {
+  display: block;
+  position: absolute;
+  margin: 0;
+  right: 0;
+  text-align: right;
+  padding-right: 5%;
+  background-color: hsl(7, 99%, 70%);
 }
 #home .title {
   text-align: center;
@@ -224,27 +273,13 @@ body {
 }
 
 #brand {
-  background-color: #fffbf8;
-  text-align: center;
-  text-align: center;
   height: 63vh;
-}
-#brand h2 {
-  font-family: "Fraunces", serif;
-  color: hsl(212, 27%, 19%);
-  font-size: 30px;
-}
-#brand p {
-  color: hsl(232, 10%, 55%);
-  font-family: "Barlow", sans-serif;
+  background-color: #fffbf8;
+  display: flex;
+  align-items: center;
 }
 #brand a {
-  color: hsl(212, 27%, 19%);
-  font-family: "Fraunces", serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-bottom: 10px solid #fedad4;
+  border-bottom: 10px solid hsl(51, 100%, 49%);
 }
 
 #glass {
@@ -257,29 +292,83 @@ body {
 }
 
 #audience {
-  text-align: center;
   height: 63vh;
+  background-color: #fffbf8;
+  display: flex;
+  align-items: center;
 }
-#audience h2 {
-  font-family: "Fraunces", serif;
+
+#design {
+  background: url(./images/photos/image-graphic-design.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10%;
+}
+#design h2, #design p {
+  color: hsl(167, 40%, 24%);
+}
+
+#photography {
+  background: url(./images/photos/image-photography.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10%;
+}
+#photography h2, #photography p {
   color: hsl(212, 27%, 19%);
-  font-size: 30px;
-}
-#audience p {
-  color: hsl(232, 10%, 55%);
-  font-family: "Barlow", sans-serif;
-}
-#audience a {
-  color: hsl(212, 27%, 19%);
-  font-family: "Fraunces", serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-bottom: 10px solid #fedad4;
+  opacity: 75%;
 }
 
 #testimonials {
   background-color: #fffbf8;
+  text-align: center;
+}
+#testimonials h3 {
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 4px;
+  padding: 10% 0;
+  font-family: "Fraunces", serif;
+  font-size: 1em;
+}
+#testimonials .people {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 0 7% 10% 7%;
+}
+#testimonials .people .person img {
+  width: 20%;
+  border-radius: 100%;
+}
+#testimonials .people .person .experience {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  color: hsl(213, 9%, 39%);
+  line-height: 30px;
+}
+#testimonials .people .person .name {
+  font-size: 18px;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+}
+#testimonials .people .person .job {
+  font-size: 15px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: hsl(210, 4%, 67%);
 }
 
 .fourphotos .photos {
@@ -310,7 +399,7 @@ footer .container nav ul {
   justify-content: center;
 }
 footer .container nav ul li {
-  padding: 0 10px;
+  padding: 5%;
 }
 footer .container nav ul li a {
   text-decoration: none;

@@ -1,6 +1,7 @@
 @import "variables";
 @import "normalize";
 @import "media-screen";
+@import "mixin";
 
 body {
     padding: 0;
@@ -10,20 +11,54 @@ body {
     box-sizing: content-box;
     width: 100%;
 }
+.text {
+    padding: 0 5%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    @include layout;
+}
 
 //---HOME--------------------------------------------------------------------------
 #home {
     height: 100vh;
     background: url("./images/photos/image-header.jpg");
     @include background-image;
+    font-family: $familyTwo;
     color: $white;
-    font-size: 30px;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: 700;
+    .logoHamburger {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10% 5%;
+    }
     .logo{
-        padding: 32px 15px;
+        height: 25px;
+        width: 120px;
     }
+    .menuButton {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
     nav {
-        display: none;
-    }
+        ul {
+            display: none;
+        }
+        ul.active {
+            display: block;
+            position: absolute;
+            margin: 0;
+            right: 0;
+            text-align: right;
+            padding-right: 5%;
+            background-color: $softRed;
+        }
+    } 
     .title {
         text-align: center;
         img{
@@ -41,9 +76,14 @@ body {
 
 //---BRAND-------------------------------------------------------------------------------------------
 #brand {
+    height: 63vh;
     background-color: $beige;
-    text-align: center;
-    @include layout;
+    display: flex;
+    align-items: center;
+    a{
+        border-bottom: 10px solid $Yellow;
+    }
+
 }
 
 
@@ -56,18 +96,83 @@ body {
 
 //---AUDIENCE-------------------------------------------------------------------------------------
 #audience {
-    @include layout;
+    height: 63vh;
+    background-color: $beige;
+    display: flex;
+    align-items: center;
 }
 
 //---DESIGN--------------------------------------------------------------------------------------------
-
+#design {
+    background: url(./images/photos/image-graphic-design.jpg);
+    height: 80vh;
+    @include background-image;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10%;
+    h2, p {
+        color: $darkDesaturatedCyan;
+    }
+}
 
 //---PHOTOGRAPHY------------------------------------------------------------------------------------------
-
+#photography {
+    background: url(./images/photos/image-photography.jpg);
+    height: 80vh;
+    @include background-image;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10%;
+    h2, p{
+        color: $veryDarkDesaturatedBlue;
+        opacity: 75%;
+    }
+    
+}
 
 //---TESTIMONIALS----------------------------------------------------------------------------------------
 #testimonials {
     background-color: $beige;
+    text-align:center;
+    h3 {
+        text-transform: uppercase;
+        color: $grayishBlue;
+        letter-spacing: 4px;
+        padding: 10% 0;
+        font-family: $familyTwo;
+        font-size: 1em;
+    }
+    .people {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 50px;
+        padding: 0 7%  10% 7%;;
+        .person {
+            img {
+                width: 20%;
+                border-radius: 100%;;
+            }
+            .experience {
+                font-size: 18px;
+                font-family: $familyOne;
+                font-weight: 700;
+                color: $veryDarkGrayishBlue;
+                line-height: 30px;
+            }
+            .name {
+                font-size: 18px;
+                font-family: $familyTwo;
+                font-weight: bold;
+            }
+            .job {
+                font-size: 15px;
+                font-family: $familyOne;
+                font-weight: 600;
+                color: $grayishBlue;
+            }
+        }
+    }
 }
 //---PHOTOS--------------------------------------------------------------------------------------------
 
@@ -102,7 +207,7 @@ footer {
                 display: flex;
                 justify-content: center;
                 li{
-                    padding: 0 10px;
+                    padding: 5%;
                     a {
                         text-decoration: none;
                         color:$darkModerateCyan;

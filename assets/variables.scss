@@ -30,12 +30,6 @@ $beige: #fffbf8;
 $familyOne: 'Barlow', sans-serif;
 $familyTwo: 'Fraunces', serif;
 
-@mixin background-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-}
 
 
 
@@ -70,24 +64,3 @@ $familyTwo: 'Fraunces', serif;
 // }
 
 
-@mixin layout {
-    text-align: center;
-    height: 63vh;
-    h2 {
-        font-family: $familyTwo;
-        color: $veryDarkDesaturatedBlue;
-        font-size: 30px;
-    }
-    p {
-        color: $darkGrayishBlue;
-        font-family: $familyOne;
-    }
-    a {
-        color: $veryDarkDesaturatedBlue;
-        font-family: $familyTwo;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 700;
-        border-bottom: 10px solid #fedad4;
-    }
-}
