@@ -1,27 +1,47 @@
 @mixin layout {
+        color: $veryDarkDesaturatedBlue;
+        font-family: $familyTwo;
+        text-transform: uppercase;
+        font-weight: 700;
     text-align: center;
-    h2 {
+}
+@mixin h2 {         
         font-family: $familyTwo;
         color: $veryDarkDesaturatedBlue;
         font-size: 30px;
     }
-    p {
-        color: $darkGrayishBlue;
-        font-family: $familyOne;
-    }
-    a {
+@mixin p {
+    color: $darkGrayishBlue;
+    font-family: $familyOne;
+}
+    
+       
+@mixin learnM {
         color: $veryDarkDesaturatedBlue;
         font-family: $familyTwo;
-        text-decoration: none;
         text-transform: uppercase;
         font-weight: 700;
-        border-bottom: 10px solid #fedad4;
-    }
 }
+
 
 @mixin background-image {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+}
+
+@mixin ul {
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 25px;
+    font-size: $fontSize;
 }

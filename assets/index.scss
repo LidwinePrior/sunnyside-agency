@@ -16,7 +16,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
-    @include layout;
+    
 }
 
 //---HOME--------------------------------------------------------------------------
@@ -26,90 +26,167 @@ body {
     @include background-image;
     font-family: $familyTwo;
     color: $white;
-    font-size: 23px;
     text-transform: uppercase;
     font-weight: 700;
+
+
     .logoHamburger {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        padding: 10% 5%;
-    }
-    .logo{
-        height: 25px;
-        width: 120px;
-    }
-    .menuButton {
-        width: 40px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-    nav {
-        ul {
+        padding: 30px 10px;
+        nav {
             display: none;
+            
+            
+        } 
+        .logo{
+            padding: 10px 20px;
+            height: 25px;
+            width: 120px;
         }
-        ul.active {
-            display: block;
-            position: absolute;
-            margin: 0;
-            right: 0;
-            text-align: right;
-            padding-right: 5%;
-            background-color: $softRed;
-        }
-    } 
+    }
     .title {
         text-align: center;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        h1 {
+            font-weight: 700;
+            padding-bottom: 5%;
+            font-size: 2.8em;
+            letter-spacing: 8px;
+        }
         img{
-            width: 10%; 
+            width: 40px; 
         }
     }
-    
+    @media screen and (min-width: 768px) {
+        .logoHamburger {
+            nav {
+                display: inline-block;
+                .list {
+                    @include ul;
+                    li {
+                        a {
+                    
+                            @include a;
+                            color: white;
+                            &:hover {
+                                color:$darkModerateCyan;
+                                text-transform: uppercase;
+                                background-color: $white;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .title {
+            h1 {
+           font-size: 4em;
+            }
+        }
+    } 
 }
 //---EGG-----------------------------------------------------
+.desktopGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 400px 300px 400px 500px 500px;
+
 #egg {
-    height: 45vh;
     background: url("./images/photos/image-transform.jpg");
     @include background-image;
 }
 
 //---BRAND-------------------------------------------------------------------------------------------
 #brand {
-    height: 63vh;
     background-color: $beige;
     display: flex;
     align-items: center;
-    a{
-        border-bottom: 10px solid $Yellow;
+    @include layout;
+    h2 {
+        @include h2;
+    }
+    p {
+        @include p;
+    }
+    .learnM{
+        @include learnM;
     }
 
+}
+@media only screen and (min-width: 768px){
+    #brand {
+        @include layout;
+        p {
+            @include p;
+        }
+        background-color: $beige;
+        display: flex;
+        align-items: center;
+        .learnM{
+            @include learnM;
+        }
+        h2 {
+            @include h2;
+            
+        }
+    }
 }
 
 
 //---Glass---------------------------------------------------
 #glass {
-    height: 45vh;
     background: url("./images/photos/image-stand-out.jpg");
     @include background-image;
 }
 
 //---AUDIENCE-------------------------------------------------------------------------------------
 #audience {
-    height: 63vh;
+    @include layout;
+    @include h2;
+    p {
+        @include p;
+    }
     background-color: $beige;
     display: flex;
     align-items: center;
+    .learnM{
+        @include learnM;
+    }
+}
+@media only screen and (min-width: 768px){
+    #audience {
+        @include layout;
+        p {
+            @include p;
+        }
+        background-color: $beige;
+        display: flex;
+        align-items: center;
+        .learnM{
+            @include learnM;
+        }
+        h2 {
+            @include h2;
+            
+        }
+    }
 }
 
 //---DESIGN--------------------------------------------------------------------------------------------
 #design {
     background: url(./images/photos/image-graphic-design.jpg);
-    height: 80vh;
+
     @include background-image;
     display: flex;
     align-items: flex-end;
     padding-bottom: 10%;
+    @include layout;
+    @include h2;
+    @include p;
     h2, p {
         color: $darkDesaturatedCyan;
     }
@@ -118,16 +195,44 @@ body {
 //---PHOTOGRAPHY------------------------------------------------------------------------------------------
 #photography {
     background: url(./images/photos/image-photography.jpg);
-    height: 80vh;
+
     @include background-image;
     display: flex;
     align-items: flex-end;
     padding-bottom: 10%;
+    @include layout;
+    @include h2;
+    @include p;
     h2, p{
         color: $veryDarkDesaturatedBlue;
         opacity: 75%;
     }
     
+}
+//---DESKTOP-GRID----------------------------------------------------------------
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 600px 600px 600px;
+        #egg {
+            order: 2;
+        }
+        #brand {
+            order: 1;
+        }
+        #glass {
+            order: 3;
+        }
+        #audience {
+            order: 4;
+        }
+        #design {
+            order: 5;
+        }
+        #photography {
+            order: 6;
+        }
+    }
 }
 
 //---TESTIMONIALS----------------------------------------------------------------------------------------
@@ -173,6 +278,19 @@ body {
             }
         }
     }
+    @media only screen and (min-width: 768px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;;
+            .people {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                width: 70%;
+            }
+        }
+    }
 }
 //---PHOTOS--------------------------------------------------------------------------------------------
 
@@ -185,6 +303,13 @@ body {
             width: 100%;
         }
     }
+    @media only screen and (min-width: 768px) {
+        .photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
 }
 
 //---FOOTER------------------------------------------------------------------------------------------------------------
@@ -194,31 +319,28 @@ footer {
         flex-direction: column;
         justify-content:space-evenly;
         align-items: center;
-        height: 52vh;
+        height: 400px;
         background-color: #90d4c5;
         .logoTwo {
-            width: 50%;
+            height: 25px;
+            width: 120px;
             opacity: 75%;
         }
         nav {
-            ul{
-                width:80%;
-                list-style: none;
+            color: $darkModerateCyan;
+            ul {
+                @include ul;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 li{
-                    padding: 5%;
                     a {
-                        text-decoration: none;
+                        @include a;
+                        padding: 0 12px;
                         color:$darkModerateCyan;
-                        padding: 10px 20px;
-                        background: transparent;
-                        border-radius: 25px;
-                        font-size: $fontSize;
-                        
+
                         &:hover {
+                            color:$darkModerateCyan;
                             text-transform: uppercase;
-                            color: $veryDarkDesaturatedBlue;
                             background-color: $white;
                             font-size: 15px;
                         }
@@ -228,8 +350,11 @@ footer {
         }
         .social-media{
             a {
+
                 padding: 0 12px;
+                color: black;
             }
         }
     }
+
 }
