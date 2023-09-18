@@ -114,6 +114,7 @@ body {
     }
     .learnM{
         @include learnM;
+        border-bottom: 10px solid #fbf2c2;
     }
 
 }
@@ -155,6 +156,7 @@ body {
     align-items: center;
     .learnM{
         @include learnM;
+        border-bottom: 10px solid #fdded5;
     }
 }
 @media only screen and (min-width: 768px){
@@ -332,12 +334,11 @@ footer {
                 @include ul;
                 display: flex;
                 justify-content: space-between;
-                li{
+                li{   //problème pas encore résolu
                     a {
                         @include a;
                         padding: 0 12px;
                         color:$darkModerateCyan;
-
                         &:hover {
                             color:$darkModerateCyan;
                             text-transform: uppercase;

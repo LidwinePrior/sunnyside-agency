@@ -303,6 +303,7 @@ body {
   font-family: "Fraunces", serif;
   text-transform: uppercase;
   font-weight: 700;
+  border-bottom: 10px solid #fbf2c2;
 }
 @media only screen and (min-width: 768px) {
   .desktopGrid #brand {
@@ -360,6 +361,7 @@ body {
   font-family: "Fraunces", serif;
   text-transform: uppercase;
   font-weight: 700;
+  border-bottom: 10px solid #fdded5;
 }
 @media only screen and (min-width: 768px) {
   .desktopGrid #audience {
