@@ -1,15 +1,16 @@
 # Sunny Side
 
- Implement a design with the power of flexboxes and grids and make it responsive.
+## Overview
 
-
+This project involves implementing a design using the power of flexboxes and grids to create a responsive web page.
+[Sunny side](https://lidwineprior.github.io/sunnyside-agency/)
 ## Lessons Learned
 
-- Write meaningful, semantically correct HTML (check on W3C)
-- Use modern positioning techniques using the grid and/or flexbox model
-- Familiarize yourself with BEM methodology
-- Create a "pixel-perfect" integration from a given wireframe
+- Wrote meaningful, semantically correct HTML (validated on W3C).
+- Used modern positioning techniques using the grid and/or flexbox model.
+- Familiarized myself with the BEM methodology.
+- Created a "pixel-perfect" integration from a given wireframe.
 
 ## Author
 
-- [@LidwinePrior](https://github.com/LidwinePrior)
+[@LidwinePrior](https://github.com/LidwinePrior)
