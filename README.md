@@ -3,6 +3,7 @@
 ## Overview
 
 This project involves implementing a design using the power of flexboxes and grids to create a responsive web page.
+
 [Sunny side](https://lidwineprior.github.io/sunnyside-agency/)
 ## Lessons Learned
 
