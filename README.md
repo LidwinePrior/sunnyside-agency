@@ -5,6 +5,7 @@
 This project involves implementing a design using the power of flexboxes and grids to create a responsive web page.
 
 [Sunny side](https://lidwineprior.github.io/sunnyside-agency/)
+
 ## Lessons Learned
 
 - Wrote meaningful, semantically correct HTML (validated on W3C).
@@ -14,4 +15,4 @@ This project involves implementing a design using the power of flexboxes and gri
 
 ## Author
 
-[@LidwinePrior](https://github.com/LidwinePrior)
+[LidwinePrior](https://github.com/LidwinePrior)
